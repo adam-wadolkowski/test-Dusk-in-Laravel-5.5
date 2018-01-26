@@ -14,4 +14,14 @@
 		</div>
 	@endif
 
+	{!! Form::open(array('route' => 'users.save','method'=>'POST')) !!}
+
+	<div class="form-group">
+        <strong>Name:</strong>
+        {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
+        {!! Form::text('name', null, ['class' => 'form-control']) !!}
+    </div>
+
+	{!! Form::close() !!}
+
 @endsection
