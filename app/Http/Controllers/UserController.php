@@ -42,7 +42,19 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|min:2|max:191',
+            'email' => 'required|email|unique:users,email',
+        ]);
+        $userData = $request->all();
+        $password = str_random(10);
+
+        $userData['password'] = Hash::make('$password');
+
+        User::create($userData);
+
+        return redirect()->route('users.index')
+            ->with('success', 'User created successfully.<br>User password is: '.$password);
     }
 
     /**
