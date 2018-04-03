@@ -17,7 +17,6 @@ Route::get('/', function () {
 });
 */
 
-
 Route::get('/', 'UserController@index')->name('users.index');
 Route::get('/user/add', 'UserController@create')->name('users.create');
 Route::post('/', 'UserController@store')->name('users.store');
