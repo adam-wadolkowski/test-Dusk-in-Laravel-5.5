@@ -8,7 +8,7 @@
 	            <h2>Add new user</h2>
 	        </div>
 	        <div class="pull-right">
-	            <a class="btn btn-primary" href="{{ route('users.index') }}"> <!--@lang('users.create.btn-back')</a> -->
+	            <a class="btn btn-primary" href="{{ route('users.index') }}">
 	            Back
 	        	</a>
 	        </div>
