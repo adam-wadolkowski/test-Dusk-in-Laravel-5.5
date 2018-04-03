@@ -2,7 +2,14 @@
 
 @section('content')
 
-<h2>Users data</h2>
+<div class="row">
+    <div class="col-lg-12 margin-tb">
+        <div class="pull-left">
+            <h2>Users data</h2>
+        </div>
+    </div>
+</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -12,7 +19,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($users_data as $user)
+        @foreach($users as $user)
         <tr>
             <td>{{++$i}}</td>
             <td>{{$user->name}}</td>
@@ -23,7 +30,7 @@
 </table>
 
 <div class="pull-right">
-    <a class="btn btn-success" href="{{ route('users.add') }}"> Add New User</a>
+    <a class="btn btn-success" href="{{ route('users.create') }}"> Add New User</a>
 </div>
 
 @endsection
