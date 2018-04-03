@@ -15,13 +15,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $userData['password'] = Hash::make('test');
+        $users = User::paginate(10);
 
-        $usersData = User::all();
-
-        return view('users.index')->with('users',$usersData)
-            ->with('i');
-        //return view('users.index')->with(compact('i','users_data'));
+        return view('users.index',['users' => $users]);
     }
 
     /**

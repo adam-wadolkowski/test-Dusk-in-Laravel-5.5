@@ -27,7 +27,6 @@
 <table class="table">
     <thead>
         <tr>
-            <th>No</th>
             <th>Name</th>
             <th>Email</th>
         </tr>
@@ -35,12 +34,13 @@
     <tbody>
         @foreach($users as $user)
         <tr>
-            <td>{{++$i}}</td>
             <td>{{$user->name}}</td>
             <td>{{$user->email}}</td>
         </tr>
         @endforeach
     </tbody>
 </table>
+
+{{ $users->links('pagination::bootstrap-4') }}
 
 @endsection
