@@ -2,10 +2,13 @@
 
 @section('content')
 
-<div class="row">
-    <div class="col-lg-12 margin-tb">
+<div class="row"><!-- align-items-center"> -->
+    <div class="col-lg-12">
         <div class="pull-left">
             <h2>Users data</h2>
+        </div>
+        <div class="pull-right align-self-center">
+            <a class="btn btn-success" href="{{ route('users.create') }}"> Add New User</a>
         </div>
     </div>
 </div>
@@ -24,7 +27,6 @@
 <table class="table">
     <thead>
         <tr>
-            <th>No</th>
             <th>Name</th>
             <th>Email</th>
         </tr>
@@ -32,7 +34,6 @@
     <tbody>
         @foreach($users as $user)
         <tr>
-            <td>{{++$i}}</td>
             <td>{{$user->name}}</td>
             <td>{{$user->email}}</td>
         </tr>
@@ -40,8 +41,6 @@
     </tbody>
 </table>
 
-<div class="pull-right">
-    <a class="btn btn-success" href="{{ route('users.create') }}"> Add New User</a>
-</div>
+{{ $users->links('pagination::bootstrap-4') }}
 
 @endsection

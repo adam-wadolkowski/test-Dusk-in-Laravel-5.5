@@ -3,7 +3,7 @@
 @section('content')
 
 	<div class="row">
-	    <div class="col-lg-12 margin-tb">
+	    <div class="col-lg-12">
 	        <div class="pull-left">
 	            <h2>Add new user</h2>
 	        </div>
@@ -40,7 +40,7 @@
         		{!! Form::text('email', null, ['placeholder' => 'E-mail','class' => 'form-control']) !!}
     		</div>
     		<div class="col-xs-12 col-sm-12 col-md-12 text-center">
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" class="btn btn-success">Submit</button>
         	</div>
 		</div>
 	</div>
