@@ -5,10 +5,9 @@
 </head>
 <body>
     @include('layouts.nav')
-    
-	<div class="container pt-5 pb-5 mt-5 mt-lg-0">
+    <div class="container pt-5 pb-5 mt-5 mt-lg-0">
         @yield('content')
+        @include('layouts.footer')
     </div>
-
 </body>
 </html>
