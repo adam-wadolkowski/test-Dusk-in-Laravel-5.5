@@ -29,6 +29,7 @@
         <tr>
             <th>Name</th>
             <th>Email</th>
+            <th>Created</th>
         </tr>
     </thead>
     <tbody>
@@ -36,6 +37,11 @@
         <tr>
             <td>{{$user->name}}</td>
             <td>{{$user->email}}</td>
+            @if($user->created_at)
+                <td>{{$user->created_at}}</td>
+            @else
+                <td> - </td>
+            @endif
         </tr>
         @endforeach
     </tbody>
