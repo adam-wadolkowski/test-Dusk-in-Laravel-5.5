@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(10);
+        $users = User::paginate(config('constants.PAGINATE.ROW_IN_PAGE'));
 
         return view('users.index',['users' => $users]);
     }
@@ -43,7 +43,7 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email',
         ]);
         $userData = $request->all();
-        $password = str_random(10);
+        $password = str_random(\Config::get('constants.LENGTH.RANDOM_PASSWORD'));
 
         $userData['password'] = Hash::make('$password');
 
