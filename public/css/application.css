@@ -1,0 +1,13 @@
+.page-footer {
+	color: #fff;
+}
+.page-footer .stress {
+	background-color: red;
+	width: 60px;
+}
+.page-footer a {
+	color: #fff;
+}
+.font-small {
+	font-size: .9rem;
+}
