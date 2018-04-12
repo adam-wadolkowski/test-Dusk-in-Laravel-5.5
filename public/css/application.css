@@ -1,13 +1,74 @@
-.page-footer {
-	color: #fff;
-}
-.page-footer .stress {
+footer .stress {
 	background-color: red;
 	width: 60px;
 }
-.page-footer a {
+footer .font-small {
+	font-size: .9rem;
+}
+footer .btn-floating {
+	width: 47px;
+	height: 47px;
+	position: relative;
+	z-index: 1;
+	vertical-align: middle;
+	display: inline-block;
+	overflow: hidden;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	margin: 10px;
+	border-radius: 50%;
+	padding: 0;
+	cursor: pointer;
+}
+footer .btn-floating:hover {
+	box-shadow:0 0 0 .4rem rgba(0,123,255,.25);
+	/*-webkit-box-shadow: 8px 25px 66px -15px rgba(0,0,0,0.91);
+-moz-box-shadow: 8px 25px 66px -15px rgba(0,0,0,0.91);
+box-shadow: 8px 25px 66px -15px rgba(0,0,0,0.91);*/
+}
+footer .btn-floating i {
+	/*font-size:1.25rem;*/
+	line-height: 47px;
+	width: inherit;
+	text-align: center;
 	color: #fff;
 }
-.font-small {
-	font-size: .9rem;
+footer .btn-floating i:hover {
+	background-color: #888888 !important;
+}
+footer .btn-fb {
+	background-color: #3b5998 !important;
+}
+footer .btn-tw {
+    background-color: #55acee !important;
+}
+footer .btn-gplus {
+	background-color: #dd4b39 !important;
+}
+footer .btn-li{
+	background-color: #0082ca !important;
+}
+footer .btn-dribbble {
+	background-color: #ec4a89 !important;
+}
+footer .btn-instagram {
+	background-image: linear-gradient(90deg, #f9ed32, #ee2a7b);
+}
+footer .btn-pinterest {
+	background-color: #C92228 !important;
+}
+footer .btn-reddit {
+	background-color: #FF5700 !important;
+}
+footer .btn-youtube {
+	background-color: #ff0000 !important;
+}
+footer .btn-skype {
+	background-color: #12A5F4 !important;
+}
+footer .btn-tumblr {
+	background-color: #35465c !important;
+}
+footer .btn-vimeo {
+	background-color: #45bbff !important;
 }

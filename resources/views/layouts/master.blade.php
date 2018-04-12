@@ -11,6 +11,7 @@
         <main>
         	@yield('content')
         </main>
+    
         <footer class="text-white font-small bg-dark pt-4 mt-4">
         	@include('layouts.footer')
         </footer>
