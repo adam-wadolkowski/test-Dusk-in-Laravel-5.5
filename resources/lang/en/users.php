@@ -13,7 +13,8 @@ return [
     	'table'	=>	[
     		'name'	=>	'Name',
     		'email'	=>	'Email',
-            'created'   =>  'Created'
+            'created'   =>  'Created',
+            'actions'   =>  'Actions'
     	],
     	'btn'	=>	[
     		'create'	=>	'Add New User'
@@ -33,6 +34,7 @@ return [
     	],
     ],
     'messages'  =>  [
-        'store' =>  '<strong>User created successfully.</strong><br>User password is: '
+        'store' =>  '<strong>User created successfully.</strong><br>User password is: ',
+        'delete'    =>  'The user has been successfully removed'
     ]
 ];
