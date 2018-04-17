@@ -5,10 +5,10 @@
 <div class="row"><!-- align-items-center"> -->
     <div class="col-lg-12">
         <div class="pull-left">
-            <h2>Users data</h2>
+            <h2>@lang('users.index.h2')</h2>
         </div>
         <div class="pull-right align-self-center">
-            <a class="btn btn-success" href="{{ route('users.create') }}"> Add New User</a>
+            <a class="btn btn-success" href="{{ route('users.create') }}"> @lang('users.index.btn.create')</a>
         </div>
     </div>
 </div>
@@ -27,9 +27,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Created</th>
+            <th>@lang('users.index.table.name')</th>
+            <th>@lang('users.index.table.email')</th>
+            <th>@lang('users.index.table.created')</th>
         </tr>
     </thead>
     <tbody>
