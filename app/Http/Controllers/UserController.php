@@ -16,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(config('constants.PAGINATE.ROW_IN_PAGE'));
+        $users = User::sortable()->paginate(config('constants.PAGINATE.ROW_IN_PAGE'));
 
         return view('users.index',['users' => $users]);
     }

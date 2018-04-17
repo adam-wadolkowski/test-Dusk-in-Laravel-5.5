@@ -21,9 +21,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th>@lang('users.index.table.name')</th>
-            <th>@lang('users.index.table.email')</th>
-            <th>@lang('users.index.table.created')</th>
+            <th>@sortablelink('name',trans('users.index.table.name'))</th>
+            <th>@sortablelink('email',trans('users.index.table.email'))</th>
+            <th>@sortablelink('created_at',trans('users.index.table.created'))</th>
             <th>@lang('users.index.table.actions')</th>
         </tr>
     </thead>
