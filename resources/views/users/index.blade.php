@@ -1,34 +1,29 @@
 @extends('layouts.master')
 
+@section('title', 'Users')
+
 @section('content')
 
 <div class="row"><!-- align-items-center"> -->
     <div class="col-lg-12">
         <div class="pull-left">
-            <h2>Users data</h2>
+            <h2>@lang('users.index.h2')</h2>
         </div>
         <div class="pull-right align-self-center">
-            <a class="btn btn-success" href="{{ route('users.create') }}"> Add New User</a>
+            <a class="btn btn-success" href="{{ route('users.create') }}"> @lang('users.index.btn.create')</a>
         </div>
     </div>
 </div>
 
-@foreach (['danger' => 'fa fa-exclamation-triangle',
-        'warning' => 'fa fa-exclamation-circle',
-        'success' => 'fa fa-check-circle',
-        'info' => 'fa-info-circle']
-        as $key => $icon)
-
-    @if(Session::has($key))
-        <div class="alert alert-{{ $key }}"><i class="{{ $icon }}"></i> {!! Session::get($key) !!}</div>
-    @endif
-@endforeach
+@component('components.show-messages')
+@endcomponent
 
 <table class="table">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Email</th>
+            <th>@lang('users.index.table.name')</th>
+            <th>@lang('users.index.table.email')</th>
+            <th>@lang('users.index.table.created')</th>
         </tr>
     </thead>
     <tbody>
@@ -36,6 +31,11 @@
         <tr>
             <td>{{$user->name}}</td>
             <td>{{$user->email}}</td>
+            @if($user->created_at)
+                <td>{{$user->created_at}}</td>
+            @else
+                <td> - </td>
+            @endif
         </tr>
         @endforeach
     </tbody>

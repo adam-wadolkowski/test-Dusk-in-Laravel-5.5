@@ -4,10 +4,17 @@
     @include('layouts.head')
 </head>
 <body>
-    @include('layouts.nav')
+	<header>
+    	@include('layouts.nav')
+	</header>
     <div class="container pt-5 pb-5 mt-5 mt-lg-0">
-        @yield('content')
-        @include('layouts.footer')
+        <main>
+        	@yield('content')
+        </main>
+    
+        <footer class="text-white font-small bg-dark pt-4 mt-4">
+        	@include('layouts.footer')
+        </footer>
     </div>
 </body>
 </html>
