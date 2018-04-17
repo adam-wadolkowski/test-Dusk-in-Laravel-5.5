@@ -24,6 +24,7 @@
             <th>@lang('users.index.table.name')</th>
             <th>@lang('users.index.table.email')</th>
             <th>@lang('users.index.table.created')</th>
+            <th>@lang('users.index.table.actions')</th>
         </tr>
     </thead>
     <tbody>
@@ -36,6 +37,13 @@
             @else
                 <td> - </td>
             @endif
+            <td>
+            {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id]]) !!}
+            
+            {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit','style'=>'padding: 0.46rem;','class' => 'btn btn-danger pull-right delete-button']) !!}
+            
+            {!! Form::close() !!}
+            </td>
         </tr>
         @endforeach
     </tbody>
