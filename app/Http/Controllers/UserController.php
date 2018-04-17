@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Hash;
+use Lang;
 use App\User;
 
 class UserController extends Controller
@@ -50,7 +51,7 @@ class UserController extends Controller
         User::create($userData);
 
         return redirect()->route('users.index')
-            ->with('success', 'User created successfully.<br>User password is: '.$password);
+            ->with('success', Lang::get('users.messages.store').'<strong>'.$password.'</strong>');
     }
 
     /**
