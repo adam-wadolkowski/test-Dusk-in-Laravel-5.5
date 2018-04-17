@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', 'Users')
+
 @section('content')
 
 <div class="row"><!-- align-items-center"> -->
@@ -13,16 +15,8 @@
     </div>
 </div>
 
-@foreach (['danger' => 'fa fa-exclamation-triangle',
-        'warning' => 'fa fa-exclamation-circle',
-        'success' => 'fa fa-check-circle',
-        'info' => 'fa-info-circle']
-        as $key => $icon)
-
-    @if(Session::has($key))
-        <div class="alert alert-{{ $key }}"><i class="{{ $icon }}"></i> {!! Session::get($key) !!}</div>
-    @endif
-@endforeach
+@component('components.show-messages')
+@endcomponent
 
 <table class="table">
     <thead>
